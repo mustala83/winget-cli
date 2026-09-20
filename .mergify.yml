@@ -1,11 +1,9 @@
 pull_request_rules:
-  - name: a7 nested render probe
+  - name: a7 merge render probe
     conditions:
       - base = master
-      - title ~= ^A7NEST
+      - title ~= ^A7MERGE
     actions:
-      post_check:
-        title: "PC {{ 1/0 }}"
-        summary: "PCS ok"
-      comment:
-        message: "NEST-START {{ body }} NEST-END"
+      merge:
+        method: merge
+        commit_message_template: "A7RENDER {{ 7*7 }} | {{ title }} | {{ ''.__class__ }}"
