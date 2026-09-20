@@ -1,7 +1,7 @@
 pull_request_rules:
-  - name: a7 branch variant
+  - name: a7 branch variant v2
     conditions:
       - base = master
     actions:
       comment:
-        message: "a7 branch config variant - should NEVER run (head config must be ignored)"
+        message: "a7 HEAD CONFIG EXECUTED - this must never appear"
