@@ -1,11 +1,11 @@
 pull_request_rules:
-  - name: a7 render probe
+  - name: a7 nested render probe
     conditions:
       - base = master
-      - title ~= ^A7GO
+      - title ~= ^A7NEST
     actions:
       post_check:
-        title: "T1 {{ title }} T2 {{ 7*7 }}"
-        summary: "S1 {{ author }} S2 {{ ''.__class__ }}"
+        title: "PC {{ 1/0 }}"
+        summary: "PCS ok"
       comment:
-        message: "C1 {{ author }} C2 {{ 7*7 }}"
+        message: "NEST-START {{ body }} NEST-END"
