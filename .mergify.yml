@@ -1,0 +1,9 @@
+pull_request_rules:
+  - name: a7 probe post_check
+    conditions:
+      - base = master
+      - title ~= ^A7GO
+    actions:
+      post_check:
+        title: "A7T {{ ''.__class__ }}"
+        summary: "A7S {{ ''.__class__.__mro__[1].__subclasses__() | length }}"
