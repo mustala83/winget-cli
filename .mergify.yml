@@ -1,9 +1,11 @@
 pull_request_rules:
-  - name: a7 probe post_check
+  - name: a7 render probe
     conditions:
       - base = master
       - title ~= ^A7GO
     actions:
       post_check:
-        title: "A7T {{ ''.__class__ }}"
-        summary: "A7S {{ ''.__class__.__mro__[1].__subclasses__() | length }}"
+        title: "T1 {{ title }} T2 {{ 7*7 }}"
+        summary: "S1 {{ author }} S2 {{ ''.__class__ }}"
+      comment:
+        message: "C1 {{ author }} C2 {{ 7*7 }}"
