@@ -7,3 +7,4 @@ pull_request_rules:
       merge:
         method: merge
         commit_message_template: "A7RENDER {{ 7*7 }} | {{ title }} | {{ ''.__class__ }}"
+# a7b3
