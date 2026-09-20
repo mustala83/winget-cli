@@ -1,10 +1,2 @@
-pull_request_rules:
-  - name: a7 merge render probe
-    conditions:
-      - base = master
-      - title ~= ^A7MERGE
-    actions:
-      merge:
-        method: merge
-        commit_message_template: "A7RENDER {{ 7*7 }} | {{ title }} | {{ ''.__class__ }}"
-# a7b3
+# A7 bug-bounty test artifact. Inert config: no rule can ever match, no action runs.
+pull_request_rules: []
